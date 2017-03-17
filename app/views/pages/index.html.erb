@@ -1,0 +1,20 @@
+<h1 class="center-align">Ribbits</h1>
+<% @ribbits.each do |ribbit| %>
+  <div class="row">
+    <div class="col m2">
+    </div>
+    <div class="col s12 m8">
+      <div class="card teal darken-2">
+        <div class="card-content white-text">
+          <span class="card-title" font-style="thin"><%= ribbit.frog.email %></span>
+          <p class="flow-text"><%= ribbit.croack %></p>
+        </div>
+        <div class="card-action">
+          <%= link_to 'Show', ribbit %>
+        </div>
+      </div>
+    </div>
+    <div class="col m2">
+    </div>
+  </div>
+<% end %>

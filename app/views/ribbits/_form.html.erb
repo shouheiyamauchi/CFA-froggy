@@ -1,0 +1,27 @@
+<%= form_for(ribbit) do |f| %>
+  <% if ribbit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ribbit.errors.count, "error") %> prohibited this ribbit from being saved:</h2>
+
+      <ul>
+      <% ribbit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%#= f.label :croack %>
+    <%= f.text_area :croack %>
+  </div>
+
+  <!-- <div class="field">
+    <%= f.label :frog_id %>
+    <%= f.text_field :frog_id %>
+  </div> -->
+
+  <div class="actions">
+    <span class="waves-effect waves-light btn"><%= f.submit %></span>
+  </div>
+<% end %>
